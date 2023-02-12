@@ -1,0 +1,1772 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,300;1,400&family=Magra:wght@700&family=Red+Hat+Text:ital,wght@0,500;1,400&family=Satisfy&display=swap');
+
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.header{
+  min-height: 765px;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header::before{
+  content: "";
+  background-color: rgba(242,120, 92, 0.7);
+  min-height: 90px;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+
+.header-bg{
+  position: absolute;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+  z-index: -2;
+  max-width: 1440px;
+  height: 765px;
+  background-image: url("/img/shapka.png");
+  background-size: auto 100%;
+}
+
+.container{
+  max-width: 1230px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 15px;
+  z-index: 100;
+}
+
+.header__inner{
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo{
+  font-family: "Magra";
+  font-size: 28px;
+  font-weight: 600;
+  padding-top: 25px;
+  padding-bottom: 34px;
+  color: #fff;
+  width: 216px;
+  cursor: pointer;
+}
+
+.header__logo::after{
+  content: "Adventure Time";
+}
+
+.header__logo:hover{
+  transform: scale(1.2);
+}
+
+.header__nav{
+  max-width: 727px;
+  font-family: "Red Hat Text";
+  font-size: 16px;
+  font-weight: 500;
+  padding-top: 35px;
+}
+
+.nav__list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 42px;
+}
+
+.nav__item{
+  padding-bottom: 34px;
+}
+
+.nav__item:nth-last-child(-n+2){
+  display: none;
+}
+
+.nav__link{
+  color: #fff;
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
+
+.nav__link:hover{
+  border-bottom: 1px solid #fff;
+}
+.header__button{
+  display: flex;
+  flex: 0 0 103px;
+  padding-bottom: 24px;
+  justify-content: flex-end;
+}
+.header__login_in{
+  display: flex;
+  justify-content: flex-end;
+}
+.header__login_in p{
+  font-family: "Red Hat Text";
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  font-style: italic;
+  line-height: 25px;
+  text-align: center;
+}
+
+.button__login{
+  font-family: 'Red Hat Text', medium;
+  color: white;
+  background-color: #0D606F;
+  padding: 10px 29px;
+  border-radius: 10px;
+  margin-top: 25px;
+  font-weight: 500;
+  size: 24px;
+  border: 0;
+  cursor: pointer;
+}
+
+.button__login_in{
+  font-family: 'Red Hat Text', medium;
+  color: white;
+  background-color: #0D606F;
+  padding: 5px 20px;
+  border-radius: 10px;
+  margin-top: 15px;
+  font-weight: 500;
+  border: 0;
+  cursor: pointer;
+}
+
+.button__login:hover{
+  background-color: #2F4F4F;
+}
+
+.login{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.login_bg{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(1, 1, 1, 0.8);
+  z-index: 1;
+}
+
+.login__in{
+  width: 650px;
+  height: 460px;
+  border-radius: 16px;
+  position: absolute;
+  top:150px;
+  background: linear-gradient(rgba(255, 255, 255, 1),
+  rgba(13, 96, 111, 1) 100%);
+  z-index: 2;
+}
+
+.login_create{
+  display: none;
+  width: 650px;
+  height: 460px;
+  border-radius: 16px;
+  position: absolute;
+  top:150px;
+  background: linear-gradient(rgba(255, 255, 255, 1),
+  rgba(13, 96, 111, 1) 100%);
+  z-index: 1;
+}
+.login_after{
+  display: none;
+  width: 650px;
+  height: 460px;
+  border-radius: 16px;
+  position: absolute;
+  top:150px;
+  background: linear-gradient(rgba(255, 255, 255, 1),
+  rgba(13, 96, 111, 1) 100%);
+  z-index: 100;
+}
+.container_login_in{
+  width: 560px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.container_login_in h1{
+  font-size: 32px;
+  font-family: "Aleo";
+  font-weight: 700;
+  color: #0D606F;
+  text-align: center;
+  padding-top: 23px;
+}
+
+.container_login_after{
+  width: 560px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.container_login_after h1{
+  font-size: 32px;
+  font-family: "Aleo";
+  font-weight: 700;
+  color: #0D606F;
+  text-align: center;
+  padding-top: 23px;
+}
+
+.login_email{
+  font-family: 'Aleo';
+  font-weight: 700;
+  font-size: 20px;
+  color: rgba(13, 96, 111, 1);
+}
+
+
+.login_account{
+  font-family: 'Aleo';
+  font-weight: 700;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  left: 170px;
+  margin-top: 37px;
+}
+
+.login_register{
+  color: #fff;
+}
+
+.login_account::before{
+  content: "";
+  border-top: 1px solid #0D606F;
+  width: 560px;
+  position: absolute;
+  right: 170px;
+  bottom: 37px;
+}
+
+.input_email{
+  width: 560px;
+  height: 54px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding-left: 7px;
+  font-size: 20px;
+  color: #0D606F;
+}
+
+.login_sign{
+  width: 560px;
+  height: 56px;
+  margin-top: 18px;
+  background-color: #0D606F;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #fff;
+  font-family: "Red Hat Text";
+  font-weight: 400;
+  margin-bottom: 18px;
+}
+
+.login_forgot{
+  font-family: 'Aleo';
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+  position: relative;
+  left:200px;
+}
+
+.container__intro {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  max-width:  1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.intro__title{
+  font-family: "Aleo";
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 96px;
+  color: #fff;
+  max-width: 892px;
+  padding-top: 32px;
+}
+
+.into__subtitle{
+  font-family: "Aleo";
+  font-weight: 700;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 24px;
+  color: #fff;
+}
+
+.subscribe{
+  width: 892px;
+  height: 95px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.subscribe__input{
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  font-size: 24px;
+  font-weight: 400;
+  color: black;
+  font-style: italic;
+  padding-top: 32px;
+  padding-left: 41px;
+  padding-bottom: 41px;
+  width: 100%;
+  border: 0;
+  padding-bottom: 33px;
+}
+
+.subscribe__input::placeholder{
+  color: #F2785C;
+  font-family: "Aleo";
+}
+
+.intro_btn{
+  position: absolute;
+  right: 0;
+  margin-right: 21px;
+  margin-bottom: 18px;
+  margin-top: 18px;
+}
+
+.subscribe__btn{
+  font-size: 24px;
+  font-family: "Red Hat Text";
+  font-weight: 500;
+  line-height: 31.75px;
+  height: 59px;
+  width: 225px;
+  border-radius: 10px;
+  background-color: #0D606F;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+
+.subscribe__btn:hover{
+  background-color: #2F4F4F;
+}
+.planning_tours{
+	position: relative;
+  margin: 0 auto;
+  width: 850px;
+  height: 600px;
+  border-radius: 16px;
+  background: linear-gradient(rgba(255, 255, 255, 1),
+  rgba(13, 96, 111, 1) 100%);
+  z-index: 101;
+}
+
+.container_tours{
+	position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+	width: 700px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.container_tours h1{
+  font-size: 32px;
+  font-family: "Aleo";
+  font-weight: 700;
+  color: #0D606F;
+  text-align: center;
+  padding-top: 23px;
+}
+.container_tours table{
+  font-family: 'Aleo';
+	font-weight: 700;
+	font-size: 15px;
+	color: black;
+}
+.container_tours td{
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.phone{
+	font-family: 'Aleo';
+	font-weight: 700;
+	font-size: 15px;
+  width: 500px;
+  text-align: center;
+  margin-top: 20px;
+	color: rgba(13, 96, 111, 1);
+	bottom: 0;
+}
+
+.login_register{
+  color: #fff;
+}
+
+.phone_number{
+	margin-top: 10px;
+  width: 320px;
+  height: 54px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding-left: 7px;
+  font-size: 15px;
+  color: #0D606F;
+}
+
+.send{
+  width: 150px;
+  height: 46px;
+  margin-top: 18px;
+  background-color: #0D606F;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #fff;
+  font-family: "Red Hat Text";
+  font-weight: 400;
+  margin-bottom: 18px;
+}
+
+.section{
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+}
+
+.container__steps{
+  width: 100%;
+  max-width: 1207px;
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 88px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+
+.common__title{
+  text-transform: uppercase;
+  font-family: "Red Hat Text";
+  font-size: 40px;
+  font-weight: 500;
+  color: #F2785C;
+  text-align: center;
+}
+
+.steps__logo{
+  display: flex;
+  padding-top: 40px;
+  justify-content: space-between;
+ }
+
+.steps__item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .steps__link{
+  cursor: pointer;
+ }
+
+ .steps__link:hover{
+  transform: scale(1.2);
+ }
+
+.steps__text{
+  font-family: "Aleo";
+  font-weight:400;
+  size: 20px;
+  color: #0D606F;
+  margin-top: 30px;
+ }
+
+.section_dest{
+  height: 1042px;
+  margin-bottom: 80px;
+  width: 100%;
+}
+
+.container_dest{
+  width: 1440px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slider-line{
+  width: 2520px;
+  left: -540px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  gap: 60px;
+  margin-top: 46px;
+  transition: all ease 1s;
+}
+
+.slider-line img{
+  border-radius: 16px;
+}
+
+.slider_img1, .slider_img2, .slider_img3{
+  color: #fff;
+  font-size: 40px;
+  font-weight: 500;
+  font-family: "Rad Hat Text";
+  position: relative;
+  transition: 1s ease 0s;
+}
+.slider_img1.right{
+  transform: translate(800px,0);
+  transition: 1s ease 0s;
+}
+.slider_img2.right{
+  transform: translate(800px,0);
+  transition: 1s ease 0s;
+}
+.slider_img3.right{
+  transform: translate(800px,0);
+  transition: 1s ease 0s;
+}
+.slider_img1.left{
+  transform: translate(-800px,0);
+  transition: 1s ease 0s;
+}
+.slider_img2.left{
+  transform: translate(-800px,0);
+  transition: 1s ease 0s;
+}
+.slider_img3.left{
+  transform: translate(-800px,0);
+  transition: 1s ease 0s;
+}
+.slider_img1::after{
+  content: 'Spain';
+  position: absolute;
+  left: 15px;
+  bottom: 40px;
+}
+
+.slider_img2::after{
+  content: "Japan";
+  position: absolute;
+  left: 15px;
+  bottom: 40px;
+}
+
+.slider_img3::after{
+  content: "USA";
+  position: absolute;
+  left: 15px;
+  bottom: 40px;
+}
+
+.tochki_dest{
+  padding-top: 24px;
+  width: 80px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.element_tochka{
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #F2785C;
+  opacity: 50%;
+}
+
+.active{
+  background-color: #F2785C;
+  opacity: 100%;
+}
+
+.dest_btn{
+  text-align: center;
+  margin-top: 40px;
+}
+
+.subscribe__btn__find{
+  font-size: 24px;
+  font-family: "Red Hat Text";
+  font-weight: 500;
+  height: 59px;
+  width: 228px;
+  border-radius: 10px;
+  background-color: #0D606F;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+
+.fon__lodka{
+  background-image: url(../img/lodka.jpg);
+  min-height: 1331px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.fon__nav{
+  background: rgba(255, 255, 255, 0.7);
+  height: 1270px;
+  width: 100%;
+}
+
+.fon__navigate__block{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 40px;
+  position: relative;
+}
+
+.fon__nav__img {
+  border-radius: 16px;
+}
+
+.fon__nav__words{
+  position: absolute;
+  top: 0;
+  left: 40px;
+  z-index: 1;
+  padding-left: 441px;
+  padding-top: 40px;
+}
+
+.fon__nav__title{
+  font-family: "Aleo";
+  font-weight: 400;
+  color: #0D606F;
+  font-size: 35px;
+  padding-bottom: 24px;
+ }
+
+.fon__nav__text{
+  font-family: "Aleo";
+  font-weight: 300;
+  size: 20px;
+  color: #0D606F;
+  line-height: 24px;
+}
+
+.nav_read{
+  color: #0D606F;
+  font-weight: 900;
+}
+
+.travel_btn{
+  text-align: center;
+  padding-top: 20px;
+}
+
+.subscribe__btn__see{
+  font-size: 24px;
+  font-family: "Red Hat Text";
+  font-weight: 500;
+  line-height: 31.75px;
+  height: 59px;
+  width: 225px;
+  border-radius: 10px;
+  background-color: #0D606F;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+
+.footer{
+  margin-top: 37px;
+  width: 100%;
+  position: relative;
+}
+
+.copyright{
+  font-family: "Red Hat Text";
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.footer__logo__item{
+  cursor: pointer;
+}
+
+.footer__logo__item:hover{
+  transform: scale(1.2);
+}
+
+.footer__logo{
+  display: flex;
+  padding-top: 5px;
+  gap: 20px;
+  padding-right: 200px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+
+@media (max-width: 1230px) {
+  .header{
+    min-height: 680px;
+  }
+  .header-bg{
+    height: 680px;
+  }
+  .intro__title{
+    font-size: 75px;
+  }
+  .fon__nav__words{
+    padding-left: 385px;
+  }
+  .subscribe__btn__see{
+    width: 185px;
+  }
+  .planning_tours{
+    width: 780px;
+    height: 540px;
+  }
+  .slider-line{
+    width: 2280px;
+    left: -514px;
+    gap: 35px;
+  }
+  .section_dest{
+    margin-bottom: 0;
+  }
+}
+
+
+@media (max-width: 990px) {
+  .header{
+    min-height: 560px;
+  }
+  .header-bg{
+    height: 560px;;
+  }
+  .intro__title{
+    font-size: 50px;
+    padding-top: 50px;
+    line-height: 50px;
+  }
+  .header__logo{
+    font-size: 26px;
+  }
+  .container__intro{
+    gap:30px
+  }
+  .subscribe{
+    width: 762px;
+  }
+  .subscribe__btn{
+    font-size: 22px;
+  }
+  .container__steps{
+    padding-top: 60px;
+  }
+  .common__title{
+    font-size: 35px;
+  }
+  .destinations{
+    margin-bottom: 60px;
+  }
+  .fon__lodka{
+    margin-top: 25px;
+  }
+  .fon__nav__title{
+    font-size: 30px;
+    padding-bottom: 10px;
+  }
+  .travel_btn{
+    padding-top: 30px;
+  }
+  .subscribe__btn__see{
+    width: 170px;
+    height: 53px;
+    font-size: 20px;
+  }
+  .footer__logo{
+    padding-right: 120px;
+  }
+  .planning_tours{
+    width: 730px;
+    height: 390px;
+  }
+  .container_tours{
+    margin-top: 0;
+  }
+  .container_tours h1{
+    font-size: 25px;
+    padding-top: 15px;
+  }
+  .container_tours table{
+    font-size: 12px;
+  }
+  .slider-line{
+    width: 2030px;
+  }
+  .section_dest{
+    height: 960px;
+  }
+}
+
+
+@media (max-width: 920px) {
+  .header__logo{
+    font-size: 24px;
+  }
+  .header__nav{
+    max-width: 627px;
+    font-size: 14px;
+  }
+  .nav__list{
+    gap: 35px;
+  }
+  .subscribe{
+    width: 722px;
+  }
+  .subscribe__input{
+    font-size: 22px;
+  }
+  .fon__lodka{
+    min-height: 1200px;
+  }
+  .fon__nav{
+    height: 1145px;
+  }
+  .fon__nav__img {
+    width: 350px;
+    height: 220px;
+  }
+  .fon__nav__words{
+    padding-left: 338px;
+  }
+  .fon__nav__title{
+    font-size: 25px;
+  }
+  .fon__nav__text{
+    height: 170px;
+    overflow: auto;
+    text-overflow: ellipsis; 
+  }
+  .subscribe__btn__see{
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+  }
+  .fon__lodka{
+    padding-top: 0;
+  }
+  .footer__logo{
+    padding-top: 0;
+  }
+  .slider-line{
+    width: 1960px;
+    left: -552px;
+  }
+  .section_dest{
+    height: 930px;
+  }
+}
+
+
+@media (max-width: 820px) {
+  .header{
+    min-height: 510px;
+  }
+  .header-bg{
+    height: 510px;;
+  }
+  .header__logo{
+    width: 185px;
+  }
+  .header__logo{
+    font-size: 24px;
+  }
+  .button__login{
+    padding: 6px 23px;
+  }
+  .fon__nav{
+    height: 1135px;
+  }
+  .subscribe__btn__see{
+    width: 139px;
+    height: 49px;
+    font-size: 17px;
+  }
+  .footer__logo{
+    padding-right: 60px;
+  }
+  .slider-line{
+    width: 1750px;
+    left: -470px;
+  }
+  .section_dest{
+    height: 855px;
+  }
+}
+
+
+@media (max-width: 770px) {
+  .header__logo{
+    font-size: 20px;
+  }
+  .header__nav{
+    max-width: 527px;
+    font-size: 12px;
+  }
+  .nav__list{
+    gap: 28px;
+  }
+  .subscribe{
+    width: 622px;
+  }
+  .intro__title{
+    font-size: 45px;
+  }
+  .subscribe__input{
+    font-size: 19px;
+  }
+  .into__subtitle{
+    font-size: 18px;
+  }
+  .common__title{
+    font-size: 32px;
+  }
+  .container__steps{
+    padding: 20px;
+  }
+  .common__title{
+    font-size: 23px;
+  }
+  .steps__logo{
+    padding-top: 21px;
+    gap:43px;
+  }
+  .steps__item{
+    gap: 0;
+    align-items: center;
+  }
+  .steps__icon{
+    width: 70px;
+    height: 70px;
+  }
+  .steps__text{
+    margin-top: 19px;
+    font-size: 14px;
+  }
+  .fon__nav__text{
+    height: 160px;
+  }
+  .fon__nav__title{
+    font-size: 20px;
+  }
+  .fon__nav__text{
+    font-size: 13px;
+  } 
+  .subscribe__btn__see{
+    width: 135px;
+    height: 48px;
+    font-size: 16px;
+  }
+  .planning_tours{
+    width: 650px;
+  }
+  .container_tours h1{
+    font-size: 23px;
+  }
+  .container_tours table{
+    font-size: 11px;
+  }
+  .phone{
+    font-size: 13px;
+  }
+  .slider-line{
+    width: 1660px;
+    left: -442px;
+  }
+  .section_dest{
+    height: 795px;
+  }
+  .subscribe__btn__find{
+    width: 194px;
+    height: 57px;
+    font-size: 22px;
+  }
+  .slider_img1, .slider_img2, .slider_img3{
+    font-size: 32px;
+  }
+}
+
+
+@media (max-width: 720px){
+  .header__header__burger{
+    margin-top: 6px;
+    margin-right: 16px;
+  }
+  .header__burger{
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+  }
+  .header__burger span{
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    top: 9px;
+    transition: all 0.5 ease 0s;
+  }
+  .header__burger::before,
+  .header__burger::after{
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    transition: all 0.5 ease 0s;
+  }
+  .header__burger::before{
+    top: 0;
+  }
+  .header__burger::after{
+    bottom: 0;
+  }
+  .header__burger.active::before{
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  .header__burger.active::after{
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+  .header__burger.active span{
+    transform: scale(0);
+  }
+  .header__nav{
+    width: 156px;
+    height: 251px;
+    padding-left: 44px;
+    padding-top: 68px;
+    border-radius: 10px;
+    font-family: "Red Hat Text";
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #F2785C;
+    position: absolute;
+    right: -100%;
+    top: 0;
+    transition: all 0.3s ease 0s;
+  }
+  .header__nav.active{
+    right: 0;
+  }  
+  .nav__list{
+    display: block;
+  }
+  .nav__item{
+    padding-bottom: 8px;
+  }
+  .nav__item:nth-last-child(-n+2){
+    display: block;
+  }
+  .nav__link{
+    transition-duration: 0;
+  }
+  .button__login{
+    display: none;
+  }
+  .intro__title{
+    font-size: 37px;
+  }
+  .subscribe__input{
+    font-size: 17px;
+    padding-top: 29px;
+  }
+  .subscribe__btn{
+    width: 190px;
+    height: 56px;
+    font-size: 24px;
+  }
+  .steps__text{
+    font-size: 12px;
+  }
+  .fon__lodka{
+    margin-top: 15px;
+    min-height: 1060px;
+  }
+  .fon__nav{
+    height: 1010px;
+  }
+  .fon__navigate__block{
+    padding-top: 25px;
+  }
+  .fon__nav__img {
+    width: 320px;
+    height: 200px;
+  }
+  .fon__nav__words{
+    padding-left: 310px;
+  }
+  .fon__nav__title{
+    font-size: 17px;
+  }
+  .subscribe__btn__see{
+    width: 125px;
+    height: 52px;
+  }
+  .copyright{
+    font-size: 15px;
+  }
+  .slider-line{
+    width: 1560px;
+    left: -412px;
+  }
+  .section_dest{
+    height: 750px;
+  }
+  .subscribe__btn__find{
+    width: 169px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 660px) {
+  .header{
+    min-height: 470px;
+  }
+  .header::before{
+    min-height: 86px;
+  }
+  .header-bg{
+    height: 470px;;
+  }
+  .nav__list{
+    display: block;
+  }
+  .nav__item{
+    padding-bottom: 8px;
+  }
+  .nav__item:nth-last-child(-n+2){
+    display: block;
+  }
+  .nav__link{
+    transition-duration: 0;
+  }
+  .button__login{
+    display: none;
+  }
+  .container__intro{
+    padding-top: 150px;
+  }
+  .intro__title{
+    display: none;
+  }
+  .into__subtitle{
+    display: none;
+  }
+  .subscribe{
+    width: 550px;
+    height: 87px;
+  }
+  .subscribe__input{
+    font-size: 17px;
+    padding-top: 29px;
+  }
+  .subscribe__btn{
+    width: 170px;
+    height: 50px;
+    font-size: 17px;
+  }
+  .steps__text{
+    font-size: 12px;
+    text-align: center;
+  }
+  .fon__lodka{
+    min-height: 958px;
+  }
+  .fon__nav{
+    height: 910px;
+  }
+  .fon__nav__img {
+    width: 265px;
+    height: 175px;
+  }
+  .fon__nav__words{
+    padding-left: 247px;
+  }
+  .fon__nav__title{
+    font-size: 15.5px;
+  }
+  .fon__nav__text{
+    height: 120px;
+    line-height: 17px;
+  }
+  .subscribe__btn{
+    width: 120px;
+    height: 45px;
+    font-size: 15px;
+  }
+  .copyright{
+    display: none;
+  }
+  .footer__logo{
+    padding-right: 0;
+    justify-content: center;
+    position: static;
+  }
+  .login__in{
+    width: 320px;
+    height: 260px;
+    top: 50px;
+  }
+  .login_create{
+    width: 320px;
+    height: 260px;
+    top: 50px;
+  }
+  .container_login_in{
+    width: 290px;
+    margin-top: 5px;
+  }
+  .container_login_in h1{
+    font-size: 16px;
+    padding-top: 13px;
+  }
+  .login_email{
+    font-size: 10px;
+  }
+  .login_account{
+    font-size: 10px;
+    left: 80px;
+    margin-top: 18px;
+  }
+  .login_account::before{
+    width: 290px;
+    right: 80px;
+    bottom: 20px;
+  }
+  .input_email{
+    width: 290px;
+    height: 27px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    font-size: 15px;
+  }
+  .login_sign{
+    width: 290px;
+    height: 28px;
+    margin-top: 18px;
+    font-size: 10px;
+    margin-bottom: 9px;
+  }
+  .login_forgot{
+    font-size: 10px;
+    left:100px;
+  }
+  .planning_tours{
+    width: 520px;
+    height: 340px;
+  }
+  .container_tours{
+    width: 520px;
+  }
+  .container_tours h1{
+    font-size: 16px;
+  }
+  .container_tours table{
+    font-size: 8px;
+  }
+  .phone_number{
+    height: 37px;
+    width: 300px;
+  }
+  .send{
+    height: 39px;
+    width: 105px;
+    font-size: 13px;
+  }
+  .slider-line{
+    width: 1385px;
+    left: -367px;
+  }
+  .section_dest{
+    height: 690px;
+  }
+  .subscribe__btn__find{
+    width: 130px;
+    height: 48px;
+    font-size: 16px;
+  }
+  .slider_img1, .slider_img2, .slider_img3{
+    font-size: 32px;
+  }
+}
+
+
+@media (max-width: 575px) {
+  .header{
+    min-height: 390px;
+  }
+  .header::before{
+    min-height: 80px;
+  }
+  .header-bg{
+    height: 390px;;
+  }
+  .header__logo::after{
+    display: none;
+  }
+  .nav__list{
+    display: block;
+  }
+  .nav__item{
+    padding-bottom: 8px;
+  }
+  .nav__item:nth-last-child(-n+2){
+    display: block;
+  }
+  .nav__link{
+    transition-duration: 0;
+  }
+  .button__login{
+    display: none;
+  }
+  .container__intro{
+    padding-top: 117px;
+  }
+  .intro__title{
+    display: none;
+  }
+  .into__subtitle{
+    display: none;
+  }
+  .subscribe{
+    width: 420px;
+    height: 45px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .subscribe__input{
+    font-size: 12px;
+    padding-top: 25px;
+  }
+  .subscribe__btn{
+    width: 119px;
+    height: 42px;
+    font-size: 14px;
+  }
+  .common__title{
+    font-size: 16px;
+  }
+  .container__steps{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .common__title{
+    font-size: 14px;
+  }
+  .steps__logo{
+    padding-top: 21px;
+    padding-left: 5px;
+    gap:43px;
+  }
+  .steps__item{
+    gap: 0;
+    align-items: center;
+  }
+  .steps__icon{
+    width: 70px;
+    height: 70px;
+  }
+  .steps__text{
+    margin-top: 19px;
+    font-size: 11px;
+    text-align: center;
+  }
+  .fon__lodka{
+    min-height: 805px;
+  }
+  .fon__nav{
+    height: 760px;
+  }
+  .fon__nav__words{
+    margin-bottom: 20px;
+  }
+  .fon__nav__img {
+    width: 225px;
+    height: 140px;
+  }
+  .fon__nav__words{
+    padding-left: 205px;
+    padding-top: 25px;
+  }
+  .fon__nav__title{
+    font-size: 12px;
+  }
+  .fon__nav__text{
+    font-size: 10px;
+  }
+  .fon__nav__text{
+    height: 109px;
+    line-height: 14px;
+  }
+  .subscribe__btn__see{
+    width: 109px;
+    height: 38px;
+    font-size: 12px;
+  }
+  .planning_tours{
+    width: 470px;
+    height: 294px;
+  }
+  .container_tours{
+    width: 460px;
+  }
+  .container_tours h1{
+    font-size: 14px;
+  }
+  .container_tours table{
+    font-size: 7px;
+  }
+  .phone{
+    margin-top: 10px;
+    font-size: 9px;
+  }
+  .phone_number{
+    margin-top: 0;
+    height: 30px;
+    width: 270px;
+  }
+  .send{
+    height: 30px;
+    width: 90px;
+    font-size: 11px;
+    margin-top: 5px;
+  }
+  .slider-line{
+    gap: 10px;
+    width: 1288px;
+    left: -352px;
+  }
+  .section_dest{
+    height: 655px;
+  }
+}
+
+
+@media (max-width: 470px) {
+  .header{
+    min-height: 340px;
+  }
+  .header::before{
+    min-height: 67px;
+  }
+  .header-bg{
+    height: 340px;;
+  }
+  .subscribe{
+    width: 370px;
+    height: 12px;
+  }
+  .subscribe__input{
+    padding-bottom: 23px;
+  }
+  .fon__lodka{
+    min-height: 725px;
+  }
+  .fon__nav{
+    height: 680px;
+  }
+  .fon__navigate__block{
+    padding-top: 11px;
+  }
+  .fon__nav__img {
+    width: 185px;
+    height: 135px;
+  }
+  .fon__nav__words{
+    padding-left: 160px;
+    padding-top: 19px;
+  }
+  .fon__nav__words:first-child{
+    padding-top: 10px;
+  }
+  .fon__nav__title{
+    font-size: 11px;
+    padding-bottom: 10px;
+   }
+  .fon__nav__text{
+    font-size: 10px;
+    line-height: 11.2px;
+    height: 90px;
+  }
+  .subscribe__btn__see{
+    width: 96px;
+    height: 35px;
+    font-size: 11px;
+  }
+  .planning_tours{
+    width: 380px;
+    height: 247px;
+  }
+  .container_tours{
+    width: 400px;
+  }
+  .container_tours h1{
+    font-size: 13px;
+    padding-top: 8px;
+  }
+  .container_tours table{
+    font-size: 5px;
+  }
+  .phone{
+    font-size: 8px;
+  }
+  .phone_number{
+    height: 21px;
+    width: 230px;
+  }
+  .send{
+    height: 22px;
+    width: 63px;
+    font-size: 8px;
+  }
+  .slider-line{
+    width: 1000px;
+    left: -267px;
+  }
+  .section_dest{
+    height: 540px;
+  }
+  .subscribe__btn__find{
+    font-size: 15px;
+  }
+  .dest_btn{
+    margin-top: 26px;
+  }
+  .slider_img1, .slider_img2, .slider_img3{
+    font-size: 22px;
+  }
+  .slider_img1::after, .slider_img2::after, .slider_img3::after{
+    bottom: 26px;
+  }
+}
+
+
+@media (max-width: 390px) {
+  .header{
+    min-height: 251px;
+  }
+  .header::before{
+    display: none;
+  }
+  .header-bg{
+    max-height: 251px;
+    background-image: url("/img/bg-mob.png");
+  }
+  .header__logo{
+    padding-top: 45px;
+    padding-left: 16px;
+  }
+  .header__logo::after{
+    display: none;
+  }
+  .nav__list{
+    display: block;
+  }
+  .nav__item{
+    padding-bottom: 8px;
+  }
+  .nav__item:nth-last-child(-n+2){
+    display: block;
+  }
+  .nav__link{
+    transition-duration: 0;
+  }
+  .button__login{
+    display: none;
+  }
+  .container__intro{
+    padding-top: 0;
+  }
+  .intro__title{
+    display: none;
+  }
+  .into__subtitle{
+    display: none;
+  }
+  .subscribe{
+    width: 360px;
+    height: 48px;
+  }
+  .subscribe__input{
+    margin: 142px 15px 61px 15px;
+    font-size: 14px;
+    padding: 16.17px 117.44px 20.72px 16.55px;
+  }
+  .intro_btn{
+    padding: 7.5px 9px;
+    margin: 151px 24px 70px 274px;
+  }
+  .subscribe__btn{
+    width: 92px;
+    height: 30px;
+    font-size: 11px;
+    line-height: 14.55px;
+  }
+  .container__steps{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .common__title{
+    font-size: 14px;
+  }
+  .steps__logo{
+    padding-top: 21px;
+    padding-left: 5px;
+    gap:43px;
+  }
+  .steps__item{
+    gap: 0;
+  }
+  .steps__icon{
+    width: 70px;
+    height: 70px;
+  }
+  .steps__text{
+    margin-top: 19px;
+    font-size: 10px;
+    text-align: center;
+  }
+  .fon__lodka{
+    background-image: url('/img/lodka_mob/bg.png');
+    min-height: 693px;
+    margin-top: 10px;
+  }
+  .fon__nav{
+    height: 628px;
+  }
+  .fon__navigate__block{
+    padding-top: 10px;
+  }
+  .fon__nav__img {
+    width: 155px;
+    height: 130px;
+  }
+  .fon__nav__words{
+    left: 10px;
+    padding-left: 158px;
+    padding-top: 15px;
+  }
+  .fon__nav__words:first-child{
+    padding-top: 10px;
+  }
+  .fon__nav__title{
+    font-size: 11px;
+    padding-bottom: 10px;
+   }
+  .fon__nav__text{
+    font-size: 9px;
+    line-height: 10.8px;
+    width: 195px;
+    height: 95px;
+    overflow: auto;
+    text-overflow: ellipsis; 
+  }
+  .travel_btn{
+    padding-left: 0;
+    padding-top: 16px;
+  }
+  .subscribe__btn__see{
+    width: 92px;
+    height: 30px;
+    font-size: 11px;
+  }
+  .copyright{
+    display: none;
+  }
+  .footer__logo__item{
+    cursor: pointer;
+  }
+  .footer__logo__item:hover{
+    transform: scale(1.2);
+  }
+  .footer{
+    margin-top: 28px;
+    width: 100%;
+  }
+  .footer__logo{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .planning_tours{
+    height: 150px;
+  }
+  .container_tours{
+    font-size: 10px;
+  }
+  .container_tours td{
+    padding-top: 5px;
+  }
+  .container_tours table{
+    font-size: 5px;
+  }
+  .slider-line{
+    width: 910px;
+    left: -250px;
+  }
+  .section_dest{
+    height: 496px;
+  }
+  .subscribe__btn__find{
+    font-size: 12px;
+    width: 106px;
+    height: 37px;
+  }
+}
